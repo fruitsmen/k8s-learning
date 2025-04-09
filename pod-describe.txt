@@ -1,0 +1,47 @@
+Name:             nginx-pod
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             desktop-o2u8qhl/172.27.81.55
+Start Time:       Wed, 02 Apr 2025 15:27:39 +0300
+Labels:           <none>
+Annotations:      cni.projectcalico.org/containerID: 6fe3db2357852da1a8895a36235a6c2971f20e4d86d748dae4d078d5a7d118e2
+                  cni.projectcalico.org/podIP: 10.1.40.238/32
+                  cni.projectcalico.org/podIPs: 10.1.40.238/32
+Status:           Running
+IP:               10.1.40.238
+IPs:
+  IP:  10.1.40.238
+Containers:
+  nginx:
+    Container ID:   containerd://186d045de6455c70a1d2386c522fe5378b33773c47eacd2f5917283c55b63beb
+    Image:          nginx:alpine
+    Image ID:       docker.io/library/nginx@sha256:4ff102c5d78d254a6f0da062b3cf39eaf07f01eec0927fd21e219d0af8bc0591
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 09 Apr 2025 17:20:38 +0300
+    Ready:          True
+    Restart Count:  32
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-jkd5h (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-jkd5h:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:                      <none>
